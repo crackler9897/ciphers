@@ -1,6 +1,6 @@
 #!/bin/bash
 # RUN ON STANDBY
-	
+# change tls	
 searchVip()
 {
 	local profilesArr=($(tmsh -q -c 'cd /'"$2"'; list ltm profile client-ssl all-properties one-line recursive' | grep -v ''"$3"'' | awk '{print $4}'))
